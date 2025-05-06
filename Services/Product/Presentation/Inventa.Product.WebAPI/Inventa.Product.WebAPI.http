@@ -1,0 +1,6 @@
+@Inventa.Product.WebAPI_HostAddress = http://localhost:5220
+
+GET {{Inventa.Product.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
