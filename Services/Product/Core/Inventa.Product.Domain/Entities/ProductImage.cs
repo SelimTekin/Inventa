@@ -6,6 +6,6 @@
         public Guid ProductId { get; set; }
         public string ImageUrl { get; set; } = string.Empty;
 
-        public Product? Product { get; set; }
+        public ProductEntity? Product { get; set; }
     }
 }

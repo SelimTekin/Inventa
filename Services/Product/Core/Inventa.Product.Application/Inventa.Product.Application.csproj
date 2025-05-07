@@ -7,9 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\CQRS\Handlers\" />
-    <Folder Include="Features\CQRS\Queries\" />
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\Inventa.Product.Domain\Inventa.Product.Domain.csproj" />
   </ItemGroup>
 
 </Project>

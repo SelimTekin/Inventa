@@ -9,6 +9,6 @@
 
         public Category? ParentCategory { get; set; }
         public List<Category>? SubCategories { get; set; }
-        public List<Product>? Products { get; set; }
+        public List<ProductEntity>? Products { get; set; }
     }
 }
