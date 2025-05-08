@@ -30,10 +30,5 @@ namespace Inventa.Product.Persistence.Repositories
         {
             return await _context.Set<ProductTag>().FindAsync(id);
         }
-        public async Task UpdateAsync(ProductTag productTag)
-        {
-            _context.Set<ProductTag>().Update(productTag);
-            await _context.SaveChangesAsync();
-        }
     }
 }

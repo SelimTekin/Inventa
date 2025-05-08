@@ -7,7 +7,6 @@ namespace Inventa.Product.Application.Interfaces
         Task<List<ProductTag>> GetAllAsync();
         Task<ProductTag> GetByIdAsync(Guid id);
         Task AddAsync(ProductTag productTag);
-        Task UpdateAsync(ProductTag productTag);
         Task DeleteAsync(ProductTag productTag);
     }
 }
