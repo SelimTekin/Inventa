@@ -1,6 +1,8 @@
-﻿namespace Inventa.Product.Application.Features.Mediator.Commands.CategoryCommands
+﻿using MediatR;
+
+namespace Inventa.Product.Application.Features.Mediator.Commands.CategoryCommands
 {
-    public class UpdateCategoryCommand
+    public class UpdateCategoryCommand : IRequest
     {
         public Guid Id { get; set; }
         public string Name { get; set; } = string.Empty;

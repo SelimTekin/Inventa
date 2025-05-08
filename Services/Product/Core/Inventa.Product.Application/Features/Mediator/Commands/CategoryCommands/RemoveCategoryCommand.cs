@@ -1,6 +1,8 @@
-﻿namespace Inventa.Product.Application.Features.Mediator.Commands.CategoryCommands
+﻿using MediatR;
+
+namespace Inventa.Product.Application.Features.Mediator.Commands.CategoryCommands
 {
-    public class RemoveCategoryCommand
+    public class RemoveCategoryCommand : IRequest
     {
         public Guid Id { get; set; }
 

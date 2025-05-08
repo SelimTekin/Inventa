@@ -1,8 +1,6 @@
-﻿using MediatR;
-
-namespace Inventa.Product.Application.Features.Mediator.Commands.BrandCommands
+﻿namespace Inventa.Product.Application.Features.Mediator.Results.BrandResults
 {
-    public class UpdateBrandCommand : IRequest
+    public class GetBrandQueryResult
     {
         public Guid Id { get; set; }
         public string Name { get; set; } = string.Empty;

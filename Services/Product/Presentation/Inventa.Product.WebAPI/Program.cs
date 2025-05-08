@@ -1,4 +1,8 @@
+using Inventa.Product.Application.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddApplicationService(builder.Configuration);
 
 // Add services to the container.
 

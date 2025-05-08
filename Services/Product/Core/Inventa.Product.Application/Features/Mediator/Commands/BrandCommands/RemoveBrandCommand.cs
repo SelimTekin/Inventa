@@ -1,6 +1,8 @@
-﻿namespace Inventa.Product.Application.Features.Mediator.Commands.BrandCommands
+﻿using MediatR;
+
+namespace Inventa.Product.Application.Features.Mediator.Commands.BrandCommands
 {
-    public class RemoveBrandCommand
+    public class RemoveBrandCommand : IRequest
     {
         public Guid Id { get; set; }
 
