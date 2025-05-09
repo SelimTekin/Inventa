@@ -3,10 +3,10 @@ using Inventa.Product.Application.Interfaces;
 
 namespace Inventa.Product.Application.Features.CQRS.Handlers.TagHandlers
 {
-    public class UpdateTagCommandHadnler
+    public class UpdateTagCommandHandler
     {
         private readonly ITagRepository _tagRepository;
-        public UpdateTagCommandHadnler(ITagRepository tagRepository)
+        public UpdateTagCommandHandler(ITagRepository tagRepository)
         {
             _tagRepository = tagRepository;
         }

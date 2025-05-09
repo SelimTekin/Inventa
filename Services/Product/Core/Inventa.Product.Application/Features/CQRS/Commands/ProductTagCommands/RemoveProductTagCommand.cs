@@ -3,12 +3,9 @@
     public class RemoveProductTagCommand
     {
         public Guid ProductId { get; set; }
-        public Guid TagId { get; set; }
-
-        public RemoveProductTagCommand(Guid productId, Guid tagId)
+        public RemoveProductTagCommand(Guid productId)
         {
             ProductId = productId;
-            TagId = tagId;
         }
     }
 }

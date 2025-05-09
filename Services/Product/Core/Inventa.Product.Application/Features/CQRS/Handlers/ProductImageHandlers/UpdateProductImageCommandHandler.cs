@@ -10,7 +10,7 @@ namespace Inventa.Product.Application.Features.CQRS.Handlers.ProductImageHandler
         {
             _productImageRepository = productImageRepository;
         }
-        public async Task Handle(UpdateProductImageCommand command, CancellationToken cancellationToken)
+        public async Task Handle(UpdateProductImageCommand command)
         {
             var value = await _productImageRepository.GetByIdAsync(command.Id);
             value.ImageUrl = command.ImageUrl;

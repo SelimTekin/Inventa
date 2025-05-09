@@ -3,10 +3,10 @@ using Inventa.Product.Application.Interfaces;
 
 namespace Inventa.Product.Application.Features.CQRS.Handlers.ProductHandlers
 {
-    public class GetProductImageQueryHandler
+    public class GetProductQueryHandler
     {
         private readonly IProductRepository _productRepository;
-        public GetProductImageQueryHandler(IProductRepository productRepository)
+        public GetProductQueryHandler(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }

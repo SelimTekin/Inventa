@@ -4,14 +4,14 @@ using Inventa.Product.Application.Interfaces;
 
 namespace Inventa.Product.Application.Features.CQRS.Handlers.ProductHandlers
 {
-    public class GetProductImageByIdQueryHandler
+    public class GetProductByIdQueryHandler
     {
         private readonly IProductRepository _productRepository;
-        public GetProductImageByIdQueryHandler(IProductRepository productRepository)
+        public GetProductByIdQueryHandler(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }
-        public async Task<GetProductByIdQueryResult> Handle(GetProductByIdQuery query, CancellationToken cancellationToken)
+        public async Task<GetProductByIdQueryResult> Handle(GetProductByIdQuery query)
         {
             var values = await _productRepository.GetByIdAsync(query.Id);
             return new GetProductByIdQueryResult

@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Core\Inventa.Product.Application\Inventa.Product.Application.csproj" />
     <ProjectReference Include="..\..\Core\Inventa.Product.Domain\Inventa.Product.Domain.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Inventa.Product.Persistence\Inventa.Product.Persistence.csproj" />

@@ -11,7 +11,7 @@ namespace Inventa.Product.Application.Features.CQRS.Handlers.ProductTagHandlers
         {
             _productTagRepository = productTagRepository;
         }
-        public async Task Handle(CreateProductTagCommand command, CancellationToken cancellationToken)
+        public async Task Handle(CreateProductTagCommand command)
         {
             await _productTagRepository.AddAsync(new ProductTag
             {

@@ -1,10 +1,11 @@
-﻿using Inventa.Product.Domain.Entities;
+﻿using Inventa.Product.Application.Interfaces;
+using Inventa.Product.Domain.Entities;
 using Inventa.Product.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace Inventa.Product.Persistence.Repositories
 {
-    public class CategoryRepository
+    public class CategoryRepository : ICategoryRepository
     {
         private readonly ProductDbContext _context;
         public CategoryRepository(ProductDbContext context)

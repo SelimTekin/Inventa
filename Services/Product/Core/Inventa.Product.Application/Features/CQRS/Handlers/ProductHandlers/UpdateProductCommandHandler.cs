@@ -3,14 +3,14 @@ using Inventa.Product.Application.Interfaces;
 
 namespace Inventa.Product.Application.Features.CQRS.Handlers.ProductHandlers
 {
-    public class UpdateProductImageCommandHandler
+    public class UpdateProductCommandHandler
     {
         private readonly IProductRepository _productRepository;
-        public UpdateProductImageCommandHandler(IProductRepository productRepository)
+        public UpdateProductCommandHandler(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }
-        public async Task Handle(UpdateProductCommand command, CancellationToken cancellationToken)
+        public async Task Handle(UpdateProductCommand command)
         {
             var values = await _productRepository.GetByIdAsync(command.Id);
             values.SKU = command.SKU;

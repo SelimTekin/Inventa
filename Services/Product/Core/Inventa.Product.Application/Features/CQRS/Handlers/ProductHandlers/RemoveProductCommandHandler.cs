@@ -3,14 +3,14 @@ using Inventa.Product.Application.Interfaces;
 
 namespace Inventa.Product.Application.Features.CQRS.Handlers.ProductHandlers
 {
-    public class RemoveProductImageCommandHandler
+    public class RemoveProductCommandHandler
     {
         private readonly IProductRepository _productRepository;
-        public RemoveProductImageCommandHandler(IProductRepository productRepository)
+        public RemoveProductCommandHandler(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }
-        public async Task Handle(RemoveProductCommand command, CancellationToken cancellationToken)
+        public async Task Handle(RemoveProductCommand command)
         {
             var value = await _productRepository.GetByIdAsync(command.Id);
             await _productRepository.DeleteAsync(value);

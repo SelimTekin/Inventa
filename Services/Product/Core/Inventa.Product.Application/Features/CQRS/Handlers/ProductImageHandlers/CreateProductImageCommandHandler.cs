@@ -11,7 +11,7 @@ namespace Inventa.Product.Application.Features.CQRS.Handlers.ProductImageHandler
         {
             _productImageRepository = productImageRepository;
         }
-        public async Task Handle(CreateProductImageCommand command, CancellationToken cancellationToken)
+        public async Task Handle(CreateProductImageCommand command)
         {
             await _productImageRepository.AddAsync(new ProductImage
             {

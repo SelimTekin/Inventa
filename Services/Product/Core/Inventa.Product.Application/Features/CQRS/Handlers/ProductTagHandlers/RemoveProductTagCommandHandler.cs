@@ -10,7 +10,7 @@ namespace Inventa.Product.Application.Features.CQRS.Handlers.ProductTagHandlers
         {
             _productTagRepository = productTagRepository;
         }
-        public async Task Handle(RemoveProductTagCommand request, CancellationToken cancellationToken)
+        public async Task Handle(RemoveProductTagCommand request)
         {
             var value = await _productTagRepository.GetByIdAsync(request.ProductId);
             await _productTagRepository.DeleteAsync(value);

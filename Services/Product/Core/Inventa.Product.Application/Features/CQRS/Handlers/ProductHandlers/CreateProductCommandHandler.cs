@@ -4,15 +4,14 @@ using Inventa.Product.Domain.Entities;
 
 namespace Inventa.Product.Application.Features.CQRS.Handlers.ProductHandlers
 {
-    public class CreateProductImageCommandHandler
+    public class CreateProductCommandHandler
     {
         private readonly IProductRepository _productRepository;
-        public CreateProductImageCommandHandler(IProductRepository productRepository)
+        public CreateProductCommandHandler(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }
-
-        public async Task Handle(CreateProductCommand command, CancellationToken cancellationToken)
+        public async Task Handle(CreateProductCommand command)
         {
             await _productRepository.AddAsync(new ProductEntity
             {
