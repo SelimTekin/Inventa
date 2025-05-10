@@ -19,7 +19,9 @@ namespace Inventa.Product.Application.Features.Mediator.Handlers.BrandHandlers
             {
                 Id = x.Id,
                 Name = x.Name,
-                Description = x.Description
+                Description = x.Description,
+                Country = x.Country,
+                LogoUrl = x.LogoUrl
             }).ToList();
         }
     }

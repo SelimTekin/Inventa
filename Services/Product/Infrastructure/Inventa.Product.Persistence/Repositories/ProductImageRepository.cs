@@ -14,29 +14,29 @@ namespace Inventa.Product.Persistence.Repositories
         }
         public async Task AddAsync(ProductImage productImage)
         {
-            _context.Set<ProductImage>().Add(productImage);
+            _context.ProductImages.Add(productImage);
             await _context.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(ProductImage productImage)
         {
-            _context.Set<ProductImage>().Remove(productImage);
+            _context.ProductImages.Remove(productImage);
             await _context.SaveChangesAsync();
         }
 
         public async Task<List<ProductImage>> GetAllAsync()
         {
-            return await _context.Set<ProductImage>().ToListAsync();
+            return await _context.ProductImages.ToListAsync();
         }
 
         public async Task<ProductImage> GetByIdAsync(Guid id)
         {
-            return await _context.Set<ProductImage>().FindAsync(id);
+            return await _context.ProductImages.FindAsync(id);
         }
 
         public async Task UpdateAsync(ProductImage productImage)
         {
-            _context.Set<ProductImage>().Update(productImage);
+            _context.ProductImages.Update(productImage);
             await _context.SaveChangesAsync();
         }
     }

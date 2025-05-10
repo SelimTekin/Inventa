@@ -14,29 +14,29 @@ namespace Inventa.Product.Persistence.Repositories
         }
         public async Task AddAsync(Tag tag)
         {
-            _context.Set<Tag>().Add(tag);
+            _context.Tags.Add(tag);
             await _context.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(Tag tag)
         {
-            _context.Set<Tag>().Remove(tag);
+            _context.Tags.Remove(tag);
             await _context.SaveChangesAsync();
         }
 
         public async Task<List<Tag>> GetAllAsync()
         {
-            return await _context.Set<Tag>().ToListAsync();
+            return await _context.Tags.ToListAsync();
         }
 
         public async Task<Tag> GetByIdAsync(Guid id)
         {
-            return await _context.Set<Tag>().FindAsync(id);
+            return await _context.Tags.FindAsync(id);
         }
 
         public async Task UpdateAsync(Tag tag)
         {
-            _context.Set<Tag>().Update(tag);
+            _context.Tags.Update(tag);
             await _context.SaveChangesAsync();
         }
     }

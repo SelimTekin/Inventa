@@ -18,7 +18,9 @@ namespace Inventa.Product.Application.Features.Mediator.Handlers.BrandHandlers
             await _brandRepository.AddAsync(new Brand
             {
                 Description = request.Description,
-                Name = request.Name
+                Name = request.Name,
+                Country = request.Country,
+                LogoUrl = request.LogoUrl
             });
         }
     }

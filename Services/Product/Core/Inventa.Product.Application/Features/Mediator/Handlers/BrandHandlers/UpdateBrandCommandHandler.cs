@@ -16,6 +16,8 @@ namespace Inventa.Product.Application.Features.Mediator.Handlers.BrandHandlers
             var value = await _brandRepository.GetByIdAsync(request.Id);
             value.Name = request.Name;
             value.Description = request.Description;
+            value.LogoUrl = request.LogoUrl;
+            value.Country = request.Country;
             await _brandRepository.UpdateAsync(value);
         }
     }

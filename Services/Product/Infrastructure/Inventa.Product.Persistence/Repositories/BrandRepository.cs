@@ -14,29 +14,29 @@ namespace Inventa.Product.Persistence.Repositories
         }
         public async Task AddAsync(Brand brand)
         {
-            _context.Set<Brand>().Add(brand);
+            _context.Brands.Add(brand);
             await _context.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(Brand brand)
         {
-            _context.Set<Brand>().Remove(brand);
+            _context.Brands.Remove(brand);
             await _context.SaveChangesAsync();
         }
 
         public async Task<List<Brand>> GetAllAsync()
         {
-            return await _context.Set<Brand>().ToListAsync();
+            return await _context.Brands.ToListAsync();
         }
 
         public async Task<Brand> GetByIdAsync(Guid id)
         {
-            return await _context.Set<Brand>().FindAsync(id);
+            return await _context.Brands.FindAsync(id);
         }
 
         public async Task UpdateAsync(Brand brand)
         {
-            _context.Set<Brand>().Update(brand);
+            _context.Brands.Update(brand);
             await _context.SaveChangesAsync();
         }
     }

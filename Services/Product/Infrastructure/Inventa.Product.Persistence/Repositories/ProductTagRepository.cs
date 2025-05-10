@@ -14,21 +14,21 @@ namespace Inventa.Product.Persistence.Repositories
         }
         public async Task AddAsync(ProductTag productTag)
         {
-            _context.Set<ProductTag>().Add(productTag);
+            _context.ProductTags.Add(productTag);
             await _context.SaveChangesAsync();
         }
         public async Task DeleteAsync(ProductTag productTag)
         {
-            _context.Set<ProductTag>().Remove(productTag);
+            _context.ProductTags.Remove(productTag);
             await _context.SaveChangesAsync();
         }
         public async Task<List<ProductTag>> GetAllAsync()
         {
-            return await _context.Set<ProductTag>().ToListAsync();
+            return await _context.ProductTags.ToListAsync();
         }
         public async Task<ProductTag> GetByIdAsync(Guid id)
         {
-            return await _context.Set<ProductTag>().FindAsync(id);
+            return await _context.ProductTags.FindAsync(id);
         }
     }
 }
