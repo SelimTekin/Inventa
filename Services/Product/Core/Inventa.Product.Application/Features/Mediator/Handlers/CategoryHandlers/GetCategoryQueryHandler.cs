@@ -20,6 +20,7 @@ namespace Inventa.Product.Application.Features.Mediator.Handlers.CategoryHandler
                 Description = x.Description,
                 Id = x.Id,
                 Name = x.Name,
+                ParentCategoryId = x.ParentCategoryId
             }).ToList();
         }
     }
