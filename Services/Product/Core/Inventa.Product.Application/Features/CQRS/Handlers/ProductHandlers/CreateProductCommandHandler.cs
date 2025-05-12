@@ -1,18 +1,22 @@
 ﻿using Inventa.Product.Application.Features.CQRS.Commands.ProductCommands;
 using Inventa.Product.Application.Interfaces;
 using Inventa.Product.Domain.Entities;
+using Microsoft.Extensions.Logging;
 
 namespace Inventa.Product.Application.Features.CQRS.Handlers.ProductHandlers
 {
     public class CreateProductCommandHandler
     {
         private readonly IProductRepository _productRepository;
-        public CreateProductCommandHandler(IProductRepository productRepository)
+        private readonly ILogger<CreateProductCommandHandler> _logger;
+        public CreateProductCommandHandler(IProductRepository productRepository, ILogger<CreateProductCommandHandler> logger)
         {
             _productRepository = productRepository;
+            _logger = logger;
         }
         public async Task Handle(CreateProductCommand command)
         {
+            _logger.LogInformation("Creating a new product with Name: {Name}", command.Name);
             await _productRepository.AddAsync(new ProductEntity
             {
                 Barcode = command.Barcode,
