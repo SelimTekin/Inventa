@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventa.Product.Persistence
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventa.Product.WebAPI", "Services\Product\Presentation\Inventa.Product.WebAPI\Inventa.Product.WebAPI.csproj", "{875F721B-4C78-490E-ACFB-B05C28A8DFA6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{27A733F0-CFAD-4331-9FD3-F32DA792DCBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventa.IdentityServer", "IdentityServer\Inventa.IdentityServer\Inventa.IdentityServer.csproj", "{C2FDD73F-4079-5D81-4C2C-5F66F6EDDFE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,10 @@ Global
 		{875F721B-4C78-490E-ACFB-B05C28A8DFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{875F721B-4C78-490E-ACFB-B05C28A8DFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{875F721B-4C78-490E-ACFB-B05C28A8DFA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2FDD73F-4079-5D81-4C2C-5F66F6EDDFE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2FDD73F-4079-5D81-4C2C-5F66F6EDDFE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2FDD73F-4079-5D81-4C2C-5F66F6EDDFE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2FDD73F-4079-5D81-4C2C-5F66F6EDDFE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +64,7 @@ Global
 		{BA7969C9-EE1A-4820-A044-9D2DCB7D1F35} = {4097AA9B-F134-498D-BBA3-3B258B97257B}
 		{FAF3E112-D28B-4072-93B3-2814795488F7} = {D39EA36E-EF19-4AF2-8F11-FDD4357387AD}
 		{875F721B-4C78-490E-ACFB-B05C28A8DFA6} = {F960F177-39F9-4804-9CD7-8B45973D4756}
+		{C2FDD73F-4079-5D81-4C2C-5F66F6EDDFE9} = {27A733F0-CFAD-4331-9FD3-F32DA792DCBA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DDC75AB4-8D19-4288-8C73-B4B66CCFFA8E}
